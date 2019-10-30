@@ -1,5 +1,11 @@
 function hitungJumlahKata(kalimat) {
-    return kalimat.split(' ').length;
+    var count = 0;
+    for (let i = 0; i < kalimat.length; i++) {
+        if(kalimat[i-1] === undefined || (kalimat[i-1] === ' ' && kalimat[i] !== ' ')){
+            count++;
+        }
+    }
+    return count;
 }
 
 // TEST CASES
