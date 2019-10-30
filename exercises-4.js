@@ -1,8 +1,9 @@
-function dataHandling2 (arr) {
+function dataHandling2 (input) {
     var hasil, potong, sortDesc, tgl, name;
-    hasil = arr.splice(3,1);
+    // input[1].push('Elsharawy');
+    // console.log(input);
 
-    potong = hasil[0].split("/");
+    potong = input[3].split("/");
     switch (potong[1]) {
         case '01':
         case '1':
@@ -54,24 +55,21 @@ function dataHandling2 (arr) {
             break;
     }
 
-    sortDesc = hasil.sort();
+    sortDesc = potong.sort();
     sortDesc = sortDesc.reverse();
 
-    tgl = hasil.join('-');
+    tgl = potong.join('-');
 
-    name = arr[1].slice(0,15);
+    name = input[1].slice(0,15);
 
-    console.log(hasil);
+    input.splice(4, 1, "Pria", "SMA Internasional Metro");
+    console.log(potong);
     console.log(potong);
     console.log(sortDesc);
     console.log(tgl);
     console.log(name);
+    console.log(input);
 }
 
-console.log('case 1: =============================================================');
 var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/5/1989", "Membaca"];
-dataHandling2(input);
-
-console.log('case 2: =============================================================');
-input = ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"];
 dataHandling2(input);
