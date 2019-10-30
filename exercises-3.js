@@ -7,13 +7,15 @@ var input = [
 ]
 
 function dataHandling(arr) {
+    var hasil = '';
     for (let i = 0; i < arr.length; i++) {
-        console.log('Nomor ID:',arr[i][0]);
-        console.log('Nama Lengkap:',arr[i][1]);
-        console.log('TTL:',arr[i][2],arr[i][3]);
-        console.log('Hobi:',arr[i][4]);
-        console.log('\n');
+        hasil += 'Nomor ID: '+arr[i][0] + '\n';
+        hasil += 'Nama Lengkap: '+arr[i][1] + '\n';
+        hasil += 'TTL: '+arr[i][2]+arr[i][3] + '\n';
+        hasil += 'Hobi: '+arr[i][4] + '\n';
+        hasil += '\n';
     }
+    return hasil;
 }
 
-dataHandling(input);
+console.log(dataHandling(input));
