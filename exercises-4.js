@@ -1,5 +1,6 @@
 function dataHandling2 (arr) {
-    var hasil, potong, sortDesc, tgl, name;
+    var potong, sortDesc, tgl;
+    // var hasil, sortDesc, tgl, name;
     arr.splice(4, 1, "Pria", "SMA Internasional Metro");
     arr.splice(1, 1, `${arr[1]}Elsharawy`);
     arr.splice(2, 1, `Provinsi ${arr[2]}`);
@@ -57,10 +58,11 @@ function dataHandling2 (arr) {
             break;
     }
 
-    // sortDesc = arr[3].split("/").reverse();
-    console.log(arr[3].split("/").reverse());
+    sortDesc = arr[3].split("/");
+    sortDesc = sortDesc.reverse();
+    sortDesc.splice(1,2,sortDesc[2],sortDesc[1])
+    console.log(sortDesc);
 
-    // tgl = arr[3].split("/").join('-');
     console.log(arr[3].split("/").join('-'));
 
     // name = arr[1].slice(0,15);
