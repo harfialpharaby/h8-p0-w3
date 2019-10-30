@@ -1,9 +1,11 @@
-function dataHandling2 (input) {
+function dataHandling2 (arr) {
     var hasil, potong, sortDesc, tgl, name;
-    // input[1].push('Elsharawy');
-    // console.log(input);
+    arr.splice(4, 1, "Pria", "SMA Internasional Metro");
+    arr.splice(1, 1, `${arr[1]}Elsharawy`);
+    arr.splice(2, 1, `Provinsi ${arr[2]}`);
+    console.log(arr);
 
-    potong = input[3].split("/");
+    potong = arr[3].split("/");
     switch (potong[1]) {
         case '01':
         case '1':
@@ -55,21 +57,15 @@ function dataHandling2 (input) {
             break;
     }
 
-    sortDesc = potong.sort();
-    sortDesc = sortDesc.reverse();
+    // sortDesc = arr[3].split("/").reverse();
+    console.log(arr[3].split("/").reverse());
 
-    tgl = potong.join('-');
+    // tgl = arr[3].split("/").join('-');
+    console.log(arr[3].split("/").join('-'));
 
-    name = input[1].slice(0,15);
-
-    input.splice(4, 1, "Pria", "SMA Internasional Metro");
-    console.log(potong);
-    console.log(potong);
-    console.log(sortDesc);
-    console.log(tgl);
-    console.log(name);
-    console.log(input);
+    // name = arr[1].slice(0,15);
+    console.log(arr[1].slice(0,15));
 }
 
-var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/5/1989", "Membaca"];
+var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 dataHandling2(input);
