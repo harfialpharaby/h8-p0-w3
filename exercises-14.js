@@ -1,19 +1,15 @@
 function mengelompokkanAngka(arr) {
     // you can only write your code here!
-    var hasil = [];
-    var kel1 = [];
-    var kel2 = [];
-    var kel3 = [];
+    var hasil = [[],[],[]];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i]%3==0) {
-            kel3.push(arr[i]);
+            hasil[2].push(arr[i]);
         } else if(arr[i]%2==0) {
-            kel1.push(arr[i]);
+            hasil[0].push(arr[i]);
         } else {
-            kel2.push(arr[i]);
+            hasil[1].push(arr[i]);
         }
     }
-    hasil.push(kel1, kel2, kel3)
     
     return hasil;
 }
